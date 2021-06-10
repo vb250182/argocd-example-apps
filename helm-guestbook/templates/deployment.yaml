@@ -67,3 +67,9 @@ spec:
       # The ScaleDownDelaySeconds is used to delay scaling down the old ReplicaSet after
       # the active Service is switched to the new ReplicaSet.
       scaleDownDelaySeconds: 120
+      prePromotionAnalysis:
+        templates:
+        - templateName: smoke-tests
+        args:
+        - name: service-name
+          value: {{ template "helm-guestbook.fullname" . }}-preview.default.svc.cluster.local
