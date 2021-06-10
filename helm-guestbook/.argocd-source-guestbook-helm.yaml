@@ -4,5 +4,5 @@ helm:
     value: gcr.io/odsp-management/argocd-dev
     forcestring: true
   - name: image.tag
-    value: 1.0.11-dev
+    value: 1.0.12-dev
     forcestring: true
