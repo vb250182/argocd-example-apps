@@ -93,5 +93,4 @@ spec:
               containers:
               - name: test
                 image: gcr.io/odsp-management/nr1-order-acceptance-tests:test
-                command: [my-test-script, my-service.default.svc.cluster.local]
               restartPolicy: Never
