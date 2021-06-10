@@ -73,3 +73,25 @@ spec:
         args:
         - name: service-name
           value: {{ template "helm-guestbook.fullname" . }}-preview.default.svc.cluster.local
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: args-example
+spec:
+  args:
+  # required
+  - name: service-name
+  metrics:
+  - name: smoke-tests
+    provider:
+      job:
+        spec:
+          backoffLimit: 1
+          template:
+            spec:
+              containers:
+              - name: test
+                image: gcr.io/odsp-management/nr1-order-acceptance-tests:test
+                command: [my-test-script, my-service.default.svc.cluster.local]
+              restartPolicy: Never
