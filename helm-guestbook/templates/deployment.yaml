@@ -77,7 +77,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: args-example
+  name: smoke-tests
 spec:
   args:
   # required
