@@ -93,6 +93,6 @@ spec:
               - name: test
                 image: curlimages/curl
                 args:
-                  - '-v'
-                  - 'http://guestbook-helm-helm-guestbook-preview'
+                  - 'https://ifconfig.me'
+#                  - 'http://guestbook-helm-helm-guestbook-preview'
               restartPolicy: Never
