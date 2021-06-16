@@ -80,7 +80,6 @@ metadata:
   name: smoke-tests
 spec:
   args:
-  # required
   - name: service-name
   metrics:
   - name: smoke-tests
@@ -92,5 +91,7 @@ spec:
             spec:
               containers:
               - name: test
-                image: gcr.io/odsp-management/nr1-order-acceptance-tests:test
+                image: curlimages/curl
+                command: [-v, http://guestbook-helm-helm-guestbook-preview]
+                args: [exit 0]
               restartPolicy: Never
