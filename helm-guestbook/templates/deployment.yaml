@@ -92,6 +92,7 @@ spec:
               containers:
               - name: test
                 image: curlimages/curl
-                command: [-v, http://guestbook-helm-helm-guestbook-preview]
-                args: [exit 0]
+                args:
+                  - '-v'
+                  - 'http://guestbook-helm-helm-guestbook-preview'
               restartPolicy: Never
