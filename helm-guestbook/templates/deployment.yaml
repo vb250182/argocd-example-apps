@@ -93,5 +93,5 @@ spec:
               - name: test
                 image: curlimages/curl
                 args:
-                  - "{{args.service-name}}"
+                  - '{{args.service-name}}'
               restartPolicy: Never
