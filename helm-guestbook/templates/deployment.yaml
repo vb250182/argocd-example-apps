@@ -63,7 +63,7 @@ spec:
       # immediately before the promotion. If omitted, the default behavior is to promote the new
       # stack as soon as the ReplicaSet are completely ready/available.
       # Rollouts can be resumed using: `kubectl argo rollouts resume ROLLOUT`
-      autoPromotionEnabled: true
+      autoPromotionEnabled: false
       # The ScaleDownDelaySeconds is used to delay scaling down the old ReplicaSet after
       # the active Service is switched to the new ReplicaSet.
       scaleDownDelaySeconds: 120
@@ -93,5 +93,5 @@ spec:
               - name: test
                 image: curlimages/curl
                 args:
-                  - '{{args.service-name}}'
+                  - 'http://{{" args.service-name "}}'
               restartPolicy: Never
