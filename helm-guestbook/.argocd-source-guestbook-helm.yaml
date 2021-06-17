@@ -1,7 +1,7 @@
 helm:
   parameters:
   - name: image.tag
-    value: 1.0.18-dev
+    value: 1.0.19-dev
     forcestring: true
   - name: image.name
     value: gcr.io/odsp-management/argocd-dev
